@@ -26,7 +26,7 @@ function logOut() {
   window.localStorage.removeItem('state');
   userDetails.classList.add('hidden');
   // redirect to signup page
-  window.location.href = './index.html';
+  window.location.href = './signup.html';
 }
 
 // 02. display user details
