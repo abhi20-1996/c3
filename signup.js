@@ -1,3 +1,32 @@
+// Whole flow of the Application
+/*
+A. when user signup for the FIRST TIME
+    1. Do name, password, email, confirm password authentication 
+    2. If there is any problem with authentication error should display
+    3. if authentication is passed and user clicks on sign up button an success message should display and After that
+        a. state, accessToken and userdeatilsObject should be created in local storage
+        b. User should be redirected to profile page
+        c. all the data should be visible
+        d. when user clicks on signup button or profile button in nav bar an alert should display stating respective message
+    4. If user clicks on logOut button on profile page
+        a. state, accessToken and userdeatilsObject should be deleted from local storage
+        b. user should be redirected to signup page
+
+B. When user leaves the page(close the tab/browser) without logging out
+        a. User should be redirected to profile page directly without showing the signup page
+        b. after refreshing page also profile page should display with all the data
+        c. when user clicks on signup button or profile button in nav bar an alert should display stating respective message
+C. When user clicks on signup button or profile button in nav bar
+        a. If user is signing up(when present on sign up page)
+            1. SignUp button:-> Nothing should happen
+            2. Profile Button:-> an alert should display stating "Please sign up first"
+        b. If user is signed up already(present on profile page)
+            1. SignUp button:-> an alert should display stating "You are already signed up!!"
+            2. Profile Button:->  Nothing should happen  
+*/
+
+//------------------------------------------------------------------------------------------------
+
 // store the hyperlink for signup and profile page
 const signUpPageEl = document.getElementById('signUp');
 const profilePageEl = document.getElementById('profile');
@@ -9,7 +38,7 @@ const passwordEl = document.getElementById('password');
 const cnfPasswordEl = document.getElementById('confirmPassword');
 const successEl = document.getElementById('success');
 const errorEl = document.getElementById('error');
-const passwordMismatchedE1 = document.getElementById('passwordMismatched');
+const passwordMismatchedEl = document.getElementById('passwordMismatched');
 const invalidemailEl = document.getElementById('invalidEmail');
 const submitBtn = document.getElementById('submit-btn');
 
